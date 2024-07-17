@@ -13,7 +13,7 @@ import RestoreIcon from '@mui/icons-material/Restore';
 import LogOut from "./Logout";
 
 function Home() {
-  const userid = localStorage.getItem("email").split("@")[0];
+  const userid = localStorage.getItem("email");
   const user = localStorage.getItem("loggedInUser");
   const navigate = useNavigate();
 
