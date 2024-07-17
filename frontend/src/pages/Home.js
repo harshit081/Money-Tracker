@@ -144,7 +144,7 @@ function Home() {
             "balance " + (balance > 100 ? "" : balance > 0 ? "yellow" : "red")
           }
         >
-          ${balance}
+          ₹{balance}
           <span
             className={
               "span " + (balance > 100 ? "" : balance > 0 ? "yellow" : "red")
