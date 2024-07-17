@@ -87,10 +87,17 @@ function Home() {
 
   function addNewTransaction(ev) {
     ev.preventDefault();
-    if (!name || !description || !datetime) {
-      handleError("Please provide valid value for transaction");
+    if (!name) {
+      handleError("Please provide valid price and name for transaction");
       console.error("Transaction");
-    } else {
+    }else if(!datetime){
+      handleError("Please provide valid datetime");
+    }
+    else {
+      if(!description){
+        handleMessage("Description Empty.");
+        description=" ";
+      }
       const url = "https://money-tracker-silk-delta.vercel.app/products" + "/transaction";
       const price = name.split(" ")[0];
 
