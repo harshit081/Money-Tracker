@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap');
+
+*{
+    /* color: #f82093; */
+    --color:#eee;
+}
+.container{
+    margin-top: auto;
+    color:var(--color);
+    position: relative;
+    width: 46.875rem; /* 750px */
+    height: 28.125rem; /* 450px */
+    border: 0.125rem solid #ff2770; /* 2px */
+    box-shadow: 0 0 1.5625rem #ff2770; /* 0 0 25px */
+    overflow: hidden;
+}
+
+.container .form-box{
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.form-box h3{
+    font-size: 1.125rem; /* 18px */
+    font-weight: 400;
+    margin-left: 3.125rem; /* 50px */
+    text-align: left;
+}
+.form-box.Login{
+    left: 0;
+    padding: 0 2.5rem; /* 40px */
+}
+.form-box.Signup{
+    right : 0;
+    padding: 0 2.5rem; /* 40px */
+}
+
+.form-box h2{
+    font-size: 2rem; /* 32px */
+    text-align: center;
+    font-weight: 450;
+}
+.form-box .input-box{
+    position: relative;
+    width: 100%;
+    height: 3.125rem; /* 50px */
+    margin-top: 1.5625rem; /* 25px */
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem; /* 16px */
+    color: #eee;
+    font-weight: 600;
+    border-bottom: 0.125rem solid #eee; /* 2px */
+    padding-right: 1.4375rem; /* 23px */
+    transition: .5s;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 1rem; /* 16px */
+    color: #eee;
+    transition: .5s;
+}
+.input-box input:invalid ~ label{
+    color: #ff2770;
+}
+.input-box input:focus ~ label,
+.input-box input:not(:placeholder-shown) ~ label{
+    top: -0.25rem; /* -4px */
+}
+.input-box input:placeholder-shown ~ label{
+    color: #eee;
+}
+.input-box input:focus,
+.input-box input:not(:placeholder-shown) {
+    border-bottom:  0.125rem; /* 2px */
+}
+    
+.input-box input:invalid {
+    border-bottom: 0.125rem solid #ff2770; /* 2px */
+}
+.input-box input:placeholder-shown,
+.input-box input:valid{
+    border-bottom: 0.125rem solid #eee; /* 2px */
+}
+.input-box .icon{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: 1.125rem; /* 18px */
+    transform: translateY(-50%);
+    color: #ff2770;
+}
+
+.btn{
+    position: relative;
+    width: 100%;
+    height: 2.5rem; /* 40px */
+    border-radius: 2.5rem; /* 40px */
+    cursor: pointer;
+    background: transparent ;
+    font-size: 1rem; /* 16px */
+    font-weight: 600;
+    border:0.125rem solid #ff2770; /* 2px */
+    overflow: hidden;
+    z-index: 1;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    height: 18.75rem; /* 300% */
+    width: 100%;
+    background: linear-gradient(#25252b,#ff2770,#25252b,#ff2770);
+    top: -100%;
+    left: 0;
+    z-index: -1;
+    transition: .5s;
+}
+.btn:hover:before{
+    top: 0;
+}
+.regi-link{
+    font-size: 0.875rem; /* 14px */
+    text-align: center;
+    margin: 1.25rem 0 0.625rem; /* 20px 0 10px */
+}
+.regi-link .link{
+    text-decoration: none;
+    color: #ff2770;
+    font-weight: 600;
+}
+.regi-link .link:hover{
+    text-decoration: underline;
+}
+
+.info-content{
+    position:absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.info-content.Login{
+    right: 0;
+    text-align: right;
+    padding: 0 2.5rem 3.75rem 9.375rem; /* 0 40px 60px 150px */
+}
+.info-content.Signup{
+    left: 0;
+    text-align: left;
+    padding: 0 9.375rem 3.75rem 2.5rem; /* 0 150px 60px 40px */
+}
+.info-content h2{
+    text-transform: uppercase;
+    font-size: 2.25rem; /* 36px */
+    line-height: 1.3;
+}
+
+.info-content p{
+    font-size: 1rem; /* 16px */
+}
+
+.container .curved-shape.Login{
+    position: absolute;
+    right: 0;
+    top: -0.3125rem; /* -5px */
+    height: 37.5rem; /* 600px */
+    width: 53.125rem; /* 850px */
+    background: linear-gradient(45deg, #25252b,#ff2770);
+    transform: rotate(10deg) skewY(40deg);
+    transform-origin: bottom right;
+    animation-iteration-count: 1;
+    transition: 1.5s ease;
+}
+
+.container .curved-shape.Signup{
+    position: absolute;
+    left: -6.875rem; /* -110px */
+    top: 6.25rem; /* 100px */
+    height: 37.5rem; /* 600px */
+    width: 53.125rem; /* 850px */
+    background: linear-gradient(45deg, #25252b,#ff2770);
+    transform: rotate(-10deg) skewY(135deg);
+    transform-origin: top left;
+}
+@media (max-width: 768px){
+
+    .container{
+        display: flex;
+        gap: 2px;
+        width: 70%; /* 750px */
+        height: 80%; /* 450px */
+        flex-direction: column;
+    }
+    
+    .container .form-box{
+        margin: auto;
+        padding: auto;
+        width: 80%;
+        height: 100%;
+        right : 0;
+        left: 0;
+    }
+    .form-box form{
+        height: max-content;
+    }
+    .form-box.Login{
+        width: 90%;
+    }
+    .form-box.Signup{
+        position: static;
+        height: 90%;
+        bottom: 10%;
+        width: 90%;
+    }
+    
+    .form-box h2{
+        font-size: 1.5rem; /* 32px */
+        text-align: center;
+        font-weight: 450;
+        bottom: 0;
+    }
+    .input-box input{
+        width: 100%;
+        height: 80%;
+    }
+    
+    .info-content{ 
+        position:static;
+        z-index: 5;
+        height: 20%;
+        width: 100%;
+        text-align: center;        
+        padding: 0;
+    }
+    .info-content.Login{
+        padding: 0;
+        text-align: center; 
+    }
+    .info-content.Signup{
+        padding: 0;
+        text-align: center;
+    }
+    .info-content.Login h2{
+        font-weight: 500;
+        font-size: 1.8rem;
+    }
+    .info-content.Login p{
+        font-size: 0.7rem; /* 16px */
+    }
+    .info-content.Signup h2{
+        font-weight: 500;
+        font-size: 1.8rem;
+    }
+    .info-content.Signup p{
+        font-size: 0.7rem; /* 16px */
+    }
+    .container .curved-shape.Login{
+        height: 10.5rem; 
+        width: 20.125rem;
+    }
+    .form-box.Signup form{
+        padding: 0;
+        margin-top: 0;
+    }
+    .form-box.Signup h2{
+        margin: 5px;
+        
+    }
+    .container .curved-shape.Signup{
+        height: 10.5rem; /* 600px */
+        width: 20.125rem; /* 850px */
+
+    }
+}
