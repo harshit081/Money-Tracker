@@ -91,7 +91,7 @@ function Home() {
       handleError("Please provide valid value for transaction");
       console.error("Transaction");
     } else {
-      const url = "https://money-tracker-silk-delta.vercel.app/products" + "/transaction";
+      const url = "https://money-tracker-silk-delta.vercel.app" + "/transaction";
       const price = name.split(" ")[0];
 
       fetch(url, {
