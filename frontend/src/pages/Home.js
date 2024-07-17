@@ -55,7 +55,7 @@ function Home() {
   };
 
   async function getTransactions() {
-    const url = "http://localhost:8080/products" + `/transactions/${userid}`;
+    const url = "https://money-tracker-silk-delta.vercel.app" + `/transactions/${userid}`;
     console.log(url);
     const response = await fetch(url);
     console.log(response);
@@ -66,7 +66,7 @@ function Home() {
   }
 
   async function deleteTransaction(id) {
-    const url = `http://localhost:8080/products/transaction/${id}`;
+    const url = `https://money-tracker-silk-delta.vercel.app/transaction/${id}`;
     await fetch(url, {
       method: "DELETE",
       headers: { "Content-type": "application/json" },
@@ -91,7 +91,7 @@ function Home() {
       handleError("Please provide valid value for transaction");
       console.error("Transaction");
     } else {
-      const url = "http://localhost:8080/products" + "/transaction";
+      const url = "https://money-tracker-silk-delta.vercel.app/products" + "/transaction";
       const price = name.split(" ")[0];
 
       fetch(url, {
