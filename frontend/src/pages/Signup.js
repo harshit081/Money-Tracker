@@ -33,7 +33,7 @@ const handleSignup = async (e)=>{
     return (handleError("Name email and password are required"));
   }
   try{
-    const url = "http://localhost:8080/auth/signup"
+    const url = "https://money-tracker-silk-delta.vercel.app/auth/signup"
     const response = await fetch(url,{
       method: "POST",
       headers: {
